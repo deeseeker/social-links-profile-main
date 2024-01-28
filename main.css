@@ -1,0 +1,134 @@
+/* ==================== */
+/* Custom Properties */
+/* ==================== */
+:root {
+  --clr-primary-400: hsl(75, 94%, 57%);
+
+  --clr-neutral-900: hsl(0, 0%, 8%);
+  --clr-neutral-800: hsl(0, 0%, 12%);
+  --clr-neutral-700: hsl(0, 0%, 20%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --ff-base: "Inter", serif;
+
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+}
+
+/* ==================== */
+/* CSS Resets */
+/* ==================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+ul {
+  padding: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* utilities */
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* general styling */
+
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: calc((14 / 16) * 1rem);
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-900);
+
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+}
+
+/* profile styles */
+
+.profile {
+  background-color: var(--clr-neutral-800);
+  border-radius: 0.5rem;
+  max-width: 600px;
+
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem;
+}
+
+.profile__img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+
+.profile__demographics :nth-child(2) {
+  color: var(--clr-primary-400);
+  font-weight: var(--fw-semibold);
+}
+
+.profile__links {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+
+  font-weight: var(--fw-bold);
+}
+
+.profile__links li {
+  background-color: var(--clr-neutral-700);
+  padding: 0.8rem 5rem;
+  border-radius: 0.5rem;
+
+  text-align: center;
+}
+
+li:is(:focus, :hover) {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-900);
+}
